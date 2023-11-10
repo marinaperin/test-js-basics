@@ -55,5 +55,28 @@ window.addEventListener("load", () => {
   });
 });
 
+
 // Bonus Exercise
 
+window.addEventListener("load", () => {
+  const body = document.getElementsByTagName("body")[0];
+  const submitButton = document.getElementById("submitButton");
+  submitButton.addEventListener("click", () => {
+    const userText = document.getElementById("userText");
+    const inputValue = userText.value;
+    const inputObject = analyzeText(inputValue);
+    const p = document.createElement("p");
+    const list = document.createElement("ul");
+    const keys = Object.keys(inputObject);
+    for (let i = 0; i < keys.length; i++) {
+      const key = keys[i];
+      const value = inputObject[key];
+      const li = document.createElement("li");
+      li.innerHTML = `${key}: ${value}`;
+      list.appendChild(li);
+    }
+    body.appendChild(p);
+    p.appendChild(list);
+    console.log(body);
+  });
+});
