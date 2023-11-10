@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: rgb(0, 39, 44);
+}
+
+body {
+  margin: 2rem;
+}
+
+h1 {
+  padding: 0.5rem 1rem;
+  font-size: 50px;
+  color: hsl(187, 100%, 18%);
+  text-decoration: underline;
+}
+
+h3 {
+  padding: 1rem;
+  color: hsl(187, 100%, 36%);
+}
+
+div {
+  padding: 0 1rem 1rem;
+}
+
+input {
+  border: 1px solid powderblue;
+  width: 150px;
+  height: 1rem;
+  padding: 0.9rem 1rem;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: center;
+}
+
+button {
+  margin-left: 0.5rem;
+  padding: 0.35rem 0.7rem;
+  color: hsl(187, 100%, 18%);
+  border: 1px solid hsl(187, 100%, 36%);
+  background-color: aliceblue;
+  font-family: inherit;
+  font-size: 1rem;
+  font-style: italic;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: hsl(187, 100%, 36%);
+}
+
+ul {
+  margin-left: 1.5rem;
+  padding: 0.5rem;
+  line-height: 1.3rem;
+}
+
+p {
+  margin-left: 1.2rem;
+}

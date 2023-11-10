@@ -8,12 +8,12 @@ const analyzeText = (string) => {
     reversedString += character;
   }
   return (object = {
-    original: string,
-    lowercase: string.toLowerCase(),
-    trimmed: string.trim(),
+    original: `"${string}"`,
+    lowercase: `"${string.toLowerCase()}"`,
+    trimmed: `"${string.trim()}"`,
     characterCount: string.trim().length,
     containsJS: string.includes("JS" || "Javascript"),
-    reversed: reversedString,
+    reversed: `"${reversedString}"`,
   });
 };
 
@@ -42,6 +42,7 @@ const countOddOrEven = (array) => {
 };
 
 // Exercise 3
+
 
 window.addEventListener("load", () => {
   const submitButton = document.getElementById("submitButton");
@@ -72,7 +73,7 @@ window.addEventListener("load", () => {
       const key = keys[i];
       const value = inputObject[key];
       const li = document.createElement("li");
-      li.innerHTML = `${key}: ${value}`;
+      li.innerHTML = `${key}: ${value},`;
       list.appendChild(li);
     }
     body.appendChild(p);
