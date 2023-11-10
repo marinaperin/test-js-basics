@@ -78,6 +78,5 @@ window.addEventListener("load", () => {
     }
     body.appendChild(p);
     p.appendChild(list);
-    console.log(body);
   });
 });
