@@ -20,28 +20,40 @@ const analyzeText = (string) => {
 // Exercise 2
 
 const fillArray = (numCount, min, max) => {
-    let num = [];
-    for (let i = 0; i < numCount; i++) {
-      const n = Math.floor(Math.random() * (max - min + 1) + min);
-      num.push(n);
-    }
-    return num;
-  };
-  
-  const countOddOrEven = (array) => {
-    let oddOrEven = {};
-    let oddTotal = 0;
-    let evenTotal = 0;
-    for (let i = 0; i < array.length; i++) {
-      array[i] % 2 === 0 ? evenTotal++ : oddTotal++;
-    }
-    return (oddOrEven = {
-      odd: oddTotal,
-      even: evenTotal,
-    });
-  };
+  let num = [];
+  for (let i = 0; i < numCount; i++) {
+    const n = Math.floor(Math.random() * (max - min + 1) + min);
+    num.push(n);
+  }
+  return num;
+};
 
+const countOddOrEven = (array) => {
+  let oddOrEven = {};
+  let oddTotal = 0;
+  let evenTotal = 0;
+  for (let i = 0; i < array.length; i++) {
+    array[i] % 2 === 0 ? evenTotal++ : oddTotal++;
+  }
+  return (oddOrEven = {
+    odd: oddTotal,
+    even: evenTotal,
+  });
+};
 
-  // Exercise 3
+// Exercise 3
 
-  
+window.addEventListener("load", () => {
+  const submitButton = document.getElementById("submitButton");
+  submitButton.addEventListener("click", () => {
+    const userText = document.getElementById("userText");
+    const inputValue = userText.value;
+    const p = document.createElement("p");
+    p.innerHTML = inputValue;
+    const body = document.getElementsByTagName('body')[0];
+    body.appendChild(p);
+  });
+});
+
+// Bonus Exercise
+
