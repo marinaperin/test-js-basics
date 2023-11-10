@@ -12,7 +12,7 @@ const analyzeText = (string) => {
     lowercase: `"${string.toLowerCase()}"`,
     trimmed: `"${string.trim()}"`,
     characterCount: string.trim().length,
-    containsJS: string.includes("JS" || "Javascript"),
+    containsJS: string.includes("JS") || string.includes("Javascript"),
     reversed: `"${reversedString}"`,
   });
 };
