@@ -49,10 +49,15 @@ window.addEventListener("load", () => {
   submitButton.addEventListener("click", () => {
     const userText = document.getElementById("userText");
     const inputValue = userText.value;
-    const p = document.createElement("p");
-    p.innerHTML = inputValue;
-    const body = document.getElementsByTagName('body')[0];
-    body.appendChild(p);
+    if(inputValue === ''){
+      alert('Insert some text before submitting');
+    }else{
+      const p = document.createElement("p");
+      p.innerHTML = inputValue;
+      const body = document.getElementsByTagName('body')[0];
+      body.appendChild(p);
+      input.value = '';
+    }
   });
 });
 
@@ -65,6 +70,9 @@ window.addEventListener("load", () => {
   submitButton.addEventListener("click", () => {
     const userText = document.getElementById("userText");
     const inputValue = userText.value;
+    if(inputValue === ''){
+      alert('Insert some text before submitting');
+    }else{
     const inputObject = analyzeText(inputValue);
     const p = document.createElement("p");
     const list = document.createElement("ul");
@@ -76,7 +84,9 @@ window.addEventListener("load", () => {
       li.innerHTML = `${key}: ${value},`;
       list.appendChild(li);
     }
-    body.appendChild(p);
-    p.appendChild(list);
+      body.appendChild(p);
+      p.appendChild(list);
+      input.value = '';
+    }
   });
 });
